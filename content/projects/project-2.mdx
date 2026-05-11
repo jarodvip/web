@@ -1,0 +1,15 @@
+---
+title: "API 聚合网关"
+description: "轻量级 API 中间层，统一多个后端服务的认证、限流和日志"
+tags: ["Node.js", "Express", "Redis", "Docker"]
+github: "https://github.com/user/api-gateway"
+date: "2024-11"
+featured: true
+---
+
+为微服务架构搭建的轻量 API 网关。
+
+**设计思路：**
+- 基于 Express 中间件链，每个功能独立解耦
+- Redis 做令牌桶限流，支持按路由配置
+- JWT 验证中间件，自动刷新过期 token
