@@ -39,7 +39,7 @@ export function TimelineItem({
       </div>
 
       {/* 内容卡片 */}
-      <div className="flex-1 rounded-xl border border-glass-border bg-glass-bg p-5 backdrop-blur-sm sm:p-6">
+      <div className="flex-1 rounded-xl border border-border bg-bg-secondary p-5 sm:p-6">
         <div className="flex flex-wrap items-baseline justify-between gap-2">
           <h3 className="text-lg font-semibold text-text-primary">
             {experience.role}

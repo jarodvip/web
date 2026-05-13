@@ -15,7 +15,7 @@ export function ProjectCard({ project, children }: ProjectCardProps) {
     <motion.article
       whileHover={{ y: -4 }}
       transition={{ duration: 0.25, ease: "easeOut" }}
-      className="group relative overflow-hidden rounded-2xl border border-glass-border bg-glass-bg p-6 backdrop-blur-sm transition-shadow hover:shadow-xl sm:p-8"
+      className="group relative overflow-hidden rounded-2xl border border-border bg-bg-secondary p-6 transition-shadow hover:shadow-xl sm:p-8"
     >
       {/* 右上角渐变角标 */}
       {project.featured && (

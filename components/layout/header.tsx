@@ -17,7 +17,7 @@ export function Header() {
     <header
       className={`sticky top-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "glass shadow-sm"
+          ? "bg-bg-primary border-b border-border"
           : "bg-transparent"
       }`}
     >

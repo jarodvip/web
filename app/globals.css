@@ -28,6 +28,7 @@
   --accent-gradient: linear-gradient(135deg, #6366f1, #8b5cf6, #ec4899);
   --glass-bg: rgba(255, 255, 255, 0.7);
   --glass-border: rgba(0, 0, 0, 0.06);
+  --border: #e5e7eb;
 }
 
 /* ===== 暗色主题 ===== */
@@ -41,6 +42,7 @@
   --accent-gradient: linear-gradient(135deg, #818cf8, #a78bfa, #f472b6);
   --glass-bg: rgba(15, 15, 25, 0.7);
   --glass-border: rgba(255, 255, 255, 0.06);
+  --border: #27272a;
 }
 
 /* ===== 全局基础样式 ===== */
@@ -59,12 +61,10 @@ body {
   background-clip: text;
 }
 
-/* 毛玻璃效果 */
-.glass {
-  background: var(--glass-bg);
-  border: 1px solid var(--glass-border);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+/* 表面效果（替代毛玻璃，性能更优） */
+.surface {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border, #e5e7eb);
 }
 
 /* 滚动平滑 */

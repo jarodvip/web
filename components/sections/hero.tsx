@@ -13,7 +13,7 @@ export function HeroSection() {
     <FadeInSection className="flex min-h-[90vh] flex-col items-center justify-center px-4 text-center">
       {/* 头像 */}
       {data.avatar && (
-        <div className="mb-8 overflow-hidden rounded-full border-4 border-glass-border shadow-xl">
+        <div className="mb-8 overflow-hidden rounded-full border-4 border-border shadow-xl">
           <Image
             src={data.avatar}
             alt={data.name}

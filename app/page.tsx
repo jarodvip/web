@@ -1,14 +1,24 @@
 import { Suspense } from "react";
+import dynamic from "next/dynamic";
 import { Header } from "@/components/layout/header";
 import { HeroSection } from "@/components/sections/hero";
-import { SkillsSection } from "@/components/sections/skills";
-import { ProjectsSection } from "@/components/sections/projects";
-import { ExperienceSection } from "@/components/sections/experience";
 import { Footer } from "@/components/layout/footer";
 import { getHero } from "@/lib/mdx";
 
+// 延迟加载非首屏组件
+const SkillsSection = dynamic(() => import("@/components/sections/skills").then(m => ({ default: m.SkillsSection })), {
+  loading: () => <div className="h-32" />,
+});
+
+const ProjectsSection = dynamic(() => import("@/components/sections/projects").then(m => ({ default: m.ProjectsSection })), {
+  loading: () => <div className="h-32" />,
+});
+
+const ExperienceSection = dynamic(() => import("@/components/sections/experience").then(m => ({ default: m.ExperienceSection })), {
+  loading: () => <div className="h-32" />,
+});
+
 export default function Page() {
-  // 获取 Hero 数据以复用社交链接到 Footer
   const { data: heroData } = getHero();
 
   return (
